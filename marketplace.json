@@ -1,0 +1,103 @@
+{
+  "name": "chatterbox-tts",
+  "displayName": "Chatterbox TTS",
+  "version": "0.1.0",
+  "description": "Zero-shot voice cloning text-to-speech for Claude Code. Speaks notifications aloud and provides on-demand TTS with your cloned voice. Optimized for Apple Silicon MPS acceleration.",
+  "shortDescription": "Voice cloning TTS for Claude notifications",
+  "author": {
+    "name": "demfabris",
+    "url": "https://github.com/demfabris"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demfabris/chatterbox-tts-plugin"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tts",
+    "text-to-speech",
+    "voice-cloning",
+    "chatterbox",
+    "audio",
+    "notifications",
+    "mps",
+    "apple-silicon",
+    "accessibility"
+  ],
+  "categories": [
+    "productivity",
+    "accessibility",
+    "audio"
+  ],
+  "platform": {
+    "os": ["macos", "linux"],
+    "arch": ["arm64", "x64"],
+    "minClaudeCodeVersion": "1.0.0"
+  },
+  "requirements": {
+    "python": ">=3.10",
+    "diskSpace": "2GB",
+    "memory": "4GB",
+    "gpu": "Apple Silicon MPS or NVIDIA CUDA (optional, CPU fallback available)"
+  },
+  "features": [
+    {
+      "name": "Voice Cloning",
+      "description": "Clone any voice from a 5-15 second audio sample"
+    },
+    {
+      "name": "Notification Speech",
+      "description": "Automatically speaks Claude's notifications aloud"
+    },
+    {
+      "name": "On-Demand TTS",
+      "description": "/speak command for instant text-to-speech"
+    },
+    {
+      "name": "MPS Acceleration",
+      "description": "3-4x faster inference on Apple Silicon GPUs"
+    },
+    {
+      "name": "Paralinguistic Tags",
+      "description": "Natural expressions like [laugh], [sigh], [cough]"
+    }
+  ],
+  "commands": [
+    {
+      "name": "/speak",
+      "description": "Generate and play speech from text"
+    },
+    {
+      "name": "/tts-setup",
+      "description": "Install dependencies and configure TTS"
+    }
+  ],
+  "hooks": [
+    {
+      "event": "SessionStart",
+      "description": "Auto-starts TTS server"
+    },
+    {
+      "event": "Notification",
+      "description": "Speaks notifications aloud"
+    }
+  ],
+  "skills": [
+    {
+      "name": "chatterbox-tts",
+      "description": "TTS setup and troubleshooting guidance"
+    }
+  ],
+  "pricing": {
+    "type": "free"
+  },
+  "icons": {
+    "small": "assets/icon-32.png",
+    "medium": "assets/icon-64.png",
+    "large": "assets/icon-128.png"
+  },
+  "screenshots": [],
+  "changelog": {
+    "0.1.0": "Initial release with MPS support, voice cloning, and notification hooks"
+  }
+}

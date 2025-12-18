@@ -1,0 +1,12 @@
+{
+  "name": "chatterbox-tts",
+  "version": "0.1.0",
+  "description": "Text-to-speech for Claude Code using Chatterbox zero-shot voice cloning with Apple Silicon MPS acceleration",
+  "author": {
+    "name": "demfabris",
+    "url": "https://github.com/demfabris"
+  },
+  "repository": "https://github.com/resemble-ai/chatterbox",
+  "license": "MIT",
+  "keywords": ["tts", "text-to-speech", "voice-cloning", "chatterbox", "mps", "apple-silicon"]
+}

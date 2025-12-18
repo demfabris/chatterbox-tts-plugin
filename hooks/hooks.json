@@ -1,0 +1,26 @@
+{
+  "SessionStart": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "/bin/bash $CLAUDE_PLUGIN_ROOT/hooks/scripts/session-start.sh",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "Notification": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "/bin/bash $CLAUDE_PLUGIN_ROOT/hooks/scripts/notification-tts.sh",
+          "timeout": 30
+        }
+      ]
+    }
+  ]
+}
