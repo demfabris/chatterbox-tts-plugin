@@ -1,7 +1,7 @@
 {
   "name": "chatterbox-tts",
   "displayName": "Chatterbox TTS",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Zero-shot voice cloning text-to-speech for Claude Code. Speaks notifications aloud and provides on-demand TTS with your cloned voice. Optimized for Apple Silicon MPS acceleration.",
   "shortDescription": "Voice cloning TTS for Claude notifications",
   "author": {
@@ -98,6 +98,7 @@
   },
   "screenshots": [],
   "changelog": {
+    "0.2.0": "Smart notifications: speaks actual Claude messages instead of generic alerts, LLM formatting via Haiku for natural speech",
     "0.1.0": "Initial release with MPS support, voice cloning, and notification hooks"
   }
 }
