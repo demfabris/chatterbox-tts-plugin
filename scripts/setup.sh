@@ -122,6 +122,22 @@ if [ -f "$TTS_FILE" ]; then
     rm -f "$TTS_FILE.bak"
 fi
 
+# Patch s3tokenizer.py for MPS float32 compatibility
+S3TOK_FILE="$REPO_DIR/src/chatterbox/models/s3tokenizer/s3tokenizer.py"
+if [ -f "$S3TOK_FILE" ]; then
+    # Convert to float32 before moving to device
+    sed -i.bak 's/wav = wav.to(self.device)/wav = wav.float().to(self.device)  # MPS requires float32/' "$S3TOK_FILE"
+    rm -f "$S3TOK_FILE.bak"
+fi
+
+# Patch voice_encoder.py for MPS float32 compatibility
+VE_FILE="$REPO_DIR/src/chatterbox/models/voice_encoder/voice_encoder.py"
+if [ -f "$VE_FILE" ]; then
+    # Convert to float32 before moving to device
+    sed -i.bak 's/mels.to(self.device)/mels.float().to(self.device)  # MPS requires float32/' "$VE_FILE"
+    rm -f "$VE_FILE.bak"
+fi
+
 # Install chatterbox from patched source
 echo ""
 echo "Installing Chatterbox (this may take a few minutes)..."

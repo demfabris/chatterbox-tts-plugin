@@ -13,10 +13,11 @@ Zero-shot voice cloning text-to-speech for Claude Code, powered by [Resemble AI'
 ## Quick Start
 
 1. Install the plugin in Claude Code
-2. Run `/tts-setup` to install dependencies (~500MB model download)
+2. **Run `/tts-setup`** to install dependencies (~500MB model download, takes 3-5 min)
 3. Use `/speak "Hello world!"` to test
+4. Check `/tts-status` if you have issues
 
-Notifications are spoken automatically once setup is complete.
+After setup, the TTS server auto-starts with each Claude Code session. Notifications are spoken automatically.
 
 ## Requirements
 
@@ -28,8 +29,9 @@ Notifications are spoken automatically once setup is complete.
 
 | Command | Description |
 |---------|-------------|
+| `/tts-setup` | **Run first!** Install dependencies and configure |
+| `/tts-status` | Check installation and server health |
 | `/speak "text"` | Generate and play speech |
-| `/tts-setup` | Install dependencies and configure |
 
 ## Voice Customization
 
